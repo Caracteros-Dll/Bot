@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
-const TOKEN = "NDI3OTI0MDU4NTU0NzYxMjI2.DZyBhA.0dsqDEfG_g4ijsNtrt3Nyu3yYwQ";
+//const TOKEN = "NDI3OTI0MDU4NTU0NzYxMjI2.DZyBhA.0dsqDEfG_g4ijsNtrt3Nyu3yYwQ";
 const errors = require("./erros.js");
 const configs = require("./botconfig.json");
 const msg = require("./msg.json");
@@ -237,14 +237,6 @@ bot.on("message", function(message)  {
       }
                     break;
 
-                          case "co":
-
- 	 if(allowedUsers.includes(message.author.id)) {
-    setInterval(() => { discoRole(); }, config.ms);
-    message.channel.sendMessage("```css\nDiscoing...```");
-    message.channel.sendMessage("Please make sure you read the README, you could get IP banned from discord because of ratelimits.");
-
-      break;
 
       
             default:    
@@ -255,4 +247,4 @@ bot.on("message", function(message)  {
     //-----------------------------------------------------------------//
 });
 
-bot.login(process.env.TOKEN);
+bot.login(process.env.BOT_TOKEN);
